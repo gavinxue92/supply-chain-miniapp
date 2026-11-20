@@ -1,0 +1,65 @@
+.list-page {
+  min-height: 100vh;
+}
+
+.list-head {
+  padding: 32rpx 28rpx 20rpx;
+  background: #ffd100;
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: 500;
+  color: #3a3500;
+}
+
+.subtitle {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  color: #6b6100;
+}
+
+.filter-bar {
+  display: flex;
+  white-space: nowrap;
+  padding: 20rpx 20rpx 12rpx;
+  background: #ffffff;
+}
+
+.filter-chip {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 12rpx 28rpx;
+  margin-right: 16rpx;
+  border-radius: 32rpx;
+  background: #f2f3f5;
+  color: #5b6068;
+  font-size: 24rpx;
+}
+
+.filter-chip.active {
+  background: #f5c400;
+  color: #3a3500;
+  font-weight: 500;
+}
+
+.inline-state {
+  padding: 60rpx 20rpx;
+  text-align: center;
+  color: #8a8f99;
+  font-size: 26rpx;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+  padding: 20rpx 20rpx 0;
+}
+
+.load-tip {
+  padding: 36rpx 20rpx 60rpx;
+  text-align: center;
+  color: #9aa0a8;
+  font-size: 24rpx;
+}

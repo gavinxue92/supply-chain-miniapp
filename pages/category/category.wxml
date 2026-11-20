@@ -1,0 +1,50 @@
+<view class="category-page">
+  <page-header
+    title="小陈食品"
+    show-home="{{true}}"
+    show-search="{{true}}"
+    bind:search="onSearchTap"
+    bind:caps="onCaps"
+  />
+
+  <view class="category-body">
+    <scroll-view class="first-column" scroll-y>
+      <view
+        wx:for="{{firstLevel}}"
+        wx:key="id"
+        class="first-item {{activeFirstId === item.id ? 'active' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="onFirstSelect"
+      >
+        <view wx:if="{{activeFirstId === item.id}}" class="first-active-bar"></view>
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+
+    <view class="second-column">
+      <scroll-view class="second-row" scroll-x>
+        <view
+          class="second-chip {{activeSecondId === allFilterId ? 'active' : ''}}"
+          data-id="{{allFilterId}}"
+          bindtap="onSecondSelect"
+        >全部</view>
+        <view
+          wx:for="{{secondOptions}}"
+          wx:key="id"
+          class="second-chip {{activeSecondId === item.id ? 'active' : ''}}"
+          data-id="{{item.id}}"
+          bindtap="onSecondSelect"
+        >{{item.name}}</view>
+      </scroll-view>
+
+      <view wx:if="{{state === 'loading'}}" class="inline-state">正在加载分类产品…</view>
+      <state-view wx:elif="{{state === 'error'}}" state="error" message="{{errorMessage}}" bind:retry="onRetry" />
+      <state-view wx:elif="{{state === 'empty'}}" state="empty" message="该分类暂无产品" />
+      <view wx:else class="product-grid">
+        <product-card wx:for="{{visibleProducts}}" wx:key="id" product="{{item}}" bind:select="onProductSelect" />
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom-space" />
+</view>

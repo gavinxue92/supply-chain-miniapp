@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "产品详情",
+  "usingComponents": {
+    "image-view": "/components/image-view/image-view",
+    "spec-list": "/components/spec-list/spec-list",
+    "state-view": "/components/state-view/state-view",
+    "contact-card": "/components/contact-card/contact-card"
+  }
+}

@@ -1,0 +1,24 @@
+<view class="page-header" style="padding-top:{{statusBarHeight}}px">
+  <view class="header-inner">
+    <view wx:if="{{showBack || showHome || showSearch}}" class="capsule left-capsule">
+      <view wx:if="{{showHome}}" class="cap" bindtap="onHome">
+        <image class="cap-icon" src="/assets/icons/line/home.png" mode="aspectFit" />
+      </view>
+      <view wx:if="{{showHome && showSearch}}" class="divider"></view>
+      <view wx:if="{{showBack}}" class="cap" bindtap="onBack">
+        <image class="cap-icon" src="/assets/icons/line/chevron-left.png" mode="aspectFit" />
+      </view>
+      <view wx:if="{{showSearch}}" class="cap" bindtap="onSearch">
+        <image class="cap-icon" src="/assets/icons/line/search.png" mode="aspectFit" />
+      </view>
+    </view>
+
+    <view class="title">{{title}}</view>
+
+    <view wx:if="{{showCaps}}" class="capsule right-capsule" bindtap="onCaps">
+      <text class="dots">•••</text>
+      <view class="divider"></view>
+      <view class="target"><view class="target-dot"></view></view>
+    </view>
+  </view>
+</view>

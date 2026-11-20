@@ -1,0 +1,52 @@
+<view class="mine-page">
+  <page-header title="个人中心" show-caps="{{true}}" bind:caps="onCaps" />
+
+  <view class="floating-music" bindtap="onUnavailable">
+    <image src="/assets/icons/line/music-note.png" mode="aspectFit" />
+  </view>
+
+  <view class="profile">
+    <view class="welcome">欢迎回来</view>
+    <view class="user-row">
+      <view class="user-info">
+        <view class="user-name">小程序用户_B7g0</view>
+        <button class="login-button" hover-class="none" bindtap="onUnavailable">立即登录</button>
+      </view>
+      <image class="avatar" src="/assets/illustrations/avatar-default.png" mode="aspectFit" />
+    </view>
+    <view class="stats">
+      <view class="stat" bindtap="onUnavailable">
+        <view class="stat-value">***</view>
+        <view class="stat-label">余额</view>
+      </view>
+      <view class="stat" bindtap="onUnavailable">
+        <view class="stat-value">***</view>
+        <view class="stat-label">积分</view>
+      </view>
+      <view class="stat" bindtap="onUnavailable">
+        <view class="stat-value">***</view>
+        <view class="stat-label">优惠券</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="member-card" bindtap="onUnavailable">
+    <view class="member-left">
+      <view class="member-title">普通会员</view>
+      <view class="member-sub">获取积分升级</view>
+    </view>
+    <view class="member-right">
+      <view>领取会员卡</view>
+      <view class="member-link">会员权益 ›</view>
+    </view>
+  </view>
+
+  <view class="feature-card">
+    <view wx:for="{{features}}" wx:key="label" class="feature-item" bindtap="onUnavailable">
+      <image class="feature-icon" src="{{item.icon}}" mode="aspectFit" />
+      <view class="feature-label">{{item.label}}</view>
+    </view>
+  </view>
+
+  <view class="bottom-space" />
+</view>

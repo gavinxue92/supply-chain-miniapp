@@ -1,0 +1,13 @@
+<view class="searchbox">
+  <image class="search-icon" src="/assets/icons/line/search.png" mode="aspectFit" />
+  <input
+    class="input"
+    placeholder="{{placeholder}}"
+    placeholder-class="placeholder"
+    value="{{keyword}}"
+    confirm-type="search"
+    bindinput="onInput"
+    bindconfirm="onSearch"
+  />
+  <text class="search-action" bindtap="onSearch">搜索</text>
+</view>

@@ -1,0 +1,31 @@
+<view wx:if="{{contact && contact.services.length > 0}}" class="info-card contact-card">
+  <view class="card-title">客服联系</view>
+  <view wx:for="{{contact.services}}" wx:key="index" class="contact-item">
+    <view class="contact-name">{{item.displayName}}</view>
+
+    <view wx:if="{{item.wechatId}}" class="contact-line">
+      <text class="contact-value">微信号：{{item.wechatId}}</text>
+      <button class="mini-btn" hover-class="none" data-value="{{item.wechatId}}" bindtap="onCopyWechat">复制</button>
+    </view>
+
+    <view wx:if="{{item.qrImageUrl}}" class="qr-row">
+      <image-view
+        class="qr-image"
+        src="{{item.qrImageUrl}}"
+        hint="二维码加载失败"
+        data-url="{{item.qrImageUrl}}"
+        bind:imagetap="onPreviewQr"
+        bind:imagelongpress="onSaveQr"
+      />
+      <text class="qr-hint">点击预览 · 长按保存</text>
+    </view>
+
+    <view wx:if="{{item.phone}}" class="contact-line">
+      <text class="contact-value">{{item.phone}}</text>
+      <view class="contact-actions">
+        <button class="mini-btn" hover-class="none" data-value="{{item.phone}}" bindtap="onCopyPhone">复制</button>
+        <button class="mini-btn" hover-class="none" data-value="{{item.phone}}" bindtap="onDial">拨打</button>
+      </view>
+    </view>
+  </view>
+</view>

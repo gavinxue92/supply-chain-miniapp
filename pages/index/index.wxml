@@ -1,0 +1,78 @@
+<view class="home">
+  <page-header title="鲜链" show-caps="{{true}}" bind:caps="onUnavailable" />
+
+  <view class="hero-section">
+    <view class="hero-copy">
+      <view class="hero-pinyin">Leng lian zhi da</view>
+      <view class="hero-title">冷链直达</view>
+      <view class="hero-sub">出海即锁鲜 · 全程 0-4℃</view>
+    </view>
+    <view class="hero-badge">0-4℃</view>
+    <image class="hero-illustration" src="/assets/illustrations/hero-coldchain-couriers.png" mode="aspectFill" />
+    <view class="hero-tip" bindtap="onUnavailable">↓ 查看保鲜管理的温度</view>
+  </view>
+
+  <view class="service-row">
+    <view class="service-card service-cold" bindtap="onUnavailable">
+      <image class="service-icon" src="/assets/icons/cold-truck-inverse.png" mode="aspectFit" />
+      <view class="service-name">冷链到家</view>
+      <view class="service-en">COLD CHAIN</view>
+    </view>
+    <view class="service-card service-box" bindtap="onUnavailable">
+      <image class="service-icon" src="/assets/icons/box-inverse.png" mode="aspectFit" />
+      <view class="service-name">整箱直采</view>
+      <view class="service-en">WHOLE BOX</view>
+    </view>
+  </view>
+
+  <view class="section-title-row">
+    <text>这一单，全程 0~4℃</text>
+    <text class="section-link" bindtap="onUnavailable">温度详情 ›</text>
+  </view>
+  <view class="temp-card">
+    <view class="temp-now">
+      <text class="temp-value">2.4℃</text>
+      <view class="temp-tag">
+        <image class="check-icon" src="/assets/icons/check-circle.png" mode="aspectFit" />
+        <text>全程未断链</text>
+      </view>
+    </view>
+    <view class="temp-desc">全程运输 24h 实时监控</view>
+    <view class="temp-wave">
+      <view class="wave-line"></view>
+      <view class="wave-dot dot-a"></view>
+      <view class="wave-dot dot-b"></view>
+      <view class="wave-dot dot-c"></view>
+      <view class="wave-dot dot-d"></view>
+    </view>
+    <view class="temp-steps">
+      <text>产地预冷</text>
+      <text>干冰装箱</text>
+      <text>冷藏车</text>
+      <text>送到家门口</text>
+    </view>
+  </view>
+
+  <view class="supply-card">
+    <view class="supply-heading">
+      <image class="guide-icon" src="/assets/icons/guide-book.png" mode="aspectFit" />
+      <text>优质工程供应链</text>
+    </view>
+    <view class="supply-item">
+      <view class="supply-num">1</view>
+      <view class="supply-text">
+        <view class="supply-item-title">工厂直采</view>
+        <view class="supply-item-desc">源头工厂直采运输</view>
+      </view>
+    </view>
+    <view class="supply-item">
+      <view class="supply-num">2</view>
+      <view class="supply-text">
+        <view class="supply-item-title">全程冷链温控</view>
+        <view class="supply-item-desc">冷藏车 · 温度记录仪</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom-space" />
+</view>

@@ -1,0 +1,104 @@
+.search-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.search-head {
+  padding: 28rpx 24rpx 16rpx;
+}
+
+.history-section {
+  margin: 44rpx 24rpx 0;
+}
+
+.history-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.history-title {
+  color: #2b2b2b;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.trash-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.history-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  margin-top: 24rpx;
+}
+
+.history-chip {
+  padding: 12rpx 24rpx;
+  border-radius: 28rpx;
+  background: #f6f6f6;
+  color: #5b5b5b;
+  font-size: 26rpx;
+}
+
+.floating-music {
+  position: fixed;
+  right: -16rpx;
+  top: 420rpx;
+  width: 88rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 6rpx 22rpx rgba(0, 0, 0, 0.08);
+}
+
+.floating-music image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.inline-state {
+  padding: 80rpx 40rpx;
+  text-align: center;
+  color: #9c8b74;
+  font-size: 26rpx;
+}
+
+.result-head {
+  padding: 24rpx 28rpx 8rpx;
+  color: #2b2b2b;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+  padding: 20rpx 20rpx 0;
+}
+
+.result-tip {
+  padding: 36rpx 20rpx 20rpx;
+  text-align: center;
+  color: #9c8b74;
+  font-size: 24rpx;
+}
+
+.home-button {
+  margin: 20rpx auto 0;
+  padding: 12rpx 40rpx;
+  border-radius: 32rpx;
+  background: #f5c400;
+  color: #3a3500;
+  font-size: 26rpx;
+}
+
+.bottom-space {
+  height: 40rpx;
+}

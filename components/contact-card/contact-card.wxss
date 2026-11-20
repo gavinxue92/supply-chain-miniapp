@@ -1,0 +1,73 @@
+.contact-card {
+  margin: 20rpx;
+  padding: 28rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
+}
+
+.card-title {
+  margin-bottom: 16rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.contact-item {
+  padding: 16rpx 0;
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.contact-item:first-of-type {
+  border-top: 0;
+}
+
+.contact-name {
+  margin-bottom: 12rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
+  padding: 6rpx 0;
+}
+
+.contact-value {
+  font-size: 24rpx;
+  color: #3f4550;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 12rpx;
+}
+
+.mini-btn {
+  padding: 8rpx 20rpx;
+  border-radius: 24rpx;
+  background: #fff3d6;
+  color: #9a6b00;
+  font-size: 22rpx;
+  line-height: 1.5;
+}
+
+.qr-row {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  padding: 12rpx 0;
+}
+
+.qr-image {
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  flex-shrink: 0;
+}
+
+.qr-hint {
+  font-size: 22rpx;
+  color: #8a8f99;
+}

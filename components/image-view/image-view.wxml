@@ -1,0 +1,12 @@
+<view class="image-wrap">
+  <image
+    wx:if="{{src && !failed}}"
+    class="image"
+    src="{{src}}"
+    mode="aspectFill"
+    binderror="onError"
+    bindtap="onTap"
+    bindlongpress="onLongPress"
+  />
+  <view wx:else class="placeholder">{{failed ? hint : '图片'}}</view>
+</view>

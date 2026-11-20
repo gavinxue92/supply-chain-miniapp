@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "page-header": "/components/page-header/page-header",
+    "search-bar": "/components/search-bar/search-bar",
+    "product-card": "/components/product-card/product-card",
+    "state-view": "/components/state-view/state-view"
+  }
+}

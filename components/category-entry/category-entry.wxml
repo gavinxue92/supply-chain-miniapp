@@ -1,0 +1,4 @@
+<view class="icon-item" hover-class="icon-item-hover" bindtap="onTap">
+  <view class="icon-badge" style="background:{{badgeColor}}">{{badgeText}}</view>
+  <view class="icon-label">{{category.name}}</view>
+</view>

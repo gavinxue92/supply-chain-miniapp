@@ -1,0 +1,11 @@
+<view class="product-card" hover-class="card-hover" bindtap="onTap">
+  <view class="p-img">
+    <image-view class="p-image-view" src="{{product.imageUrl}}" hint="主图加载失败" />
+    <text class="p-tag">参考价</text>
+  </view>
+  <view class="p-body">
+    <view class="p-title">{{product.name}}</view>
+    <spec-list specifications="{{product.specifications}}" />
+    <view class="p-note">{{product.notice}}</view>
+  </view>
+</view>

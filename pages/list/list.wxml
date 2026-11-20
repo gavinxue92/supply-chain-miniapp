@@ -1,0 +1,31 @@
+<view class="list-page">
+  <view class="list-head">
+    <view class="title">{{categoryName || '分类产品列表'}}</view>
+    <view class="subtitle">共 {{totalCount}} 条 · 排序沿用后端</view>
+  </view>
+
+  <scroll-view wx:if="{{filterOptions.length > 0}}" class="filter-bar" scroll-x>
+    <view
+      class="filter-chip {{activeFilterId === allFilterId ? 'active' : ''}}"
+      data-id="{{allFilterId}}"
+      bindtap="onFilterSelect"
+    >全部</view>
+    <view
+      wx:for="{{filterOptions}}"
+      wx:key="id"
+      class="filter-chip {{activeFilterId === item.id ? 'active' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="onFilterSelect"
+    >{{item.name}}</view>
+  </scroll-view>
+
+  <view wx:if="{{state === 'loading'}}" class="inline-state">正在加载产品列表…</view>
+  <state-view wx:elif="{{state === 'error'}}" state="error" message="{{errorMessage}}" bind:retry="onRetry" />
+  <state-view wx:elif="{{state === 'empty'}}" state="empty" message="该分类暂无产品" />
+  <block wx:else>
+    <view class="product-grid">
+      <product-card wx:for="{{visibleProducts}}" wx:key="id" product="{{item}}" bind:select="onProductSelect" />
+    </view>
+    <view class="load-tip">{{hasMore ? '上滑加载更多' : '已显示全部产品'}}</view>
+  </block>
+</view>

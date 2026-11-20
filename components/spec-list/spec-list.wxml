@@ -1,0 +1,7 @@
+<view wx:if="{{specifications.length > 0}}" class="spec-list">
+  <view wx:for="{{specifications}}" wx:key="name" class="spec-row">
+    <text class="spec-name">{{item.name}}</text>
+    <text class="spec-price {{item.isNegotiable ? 'face' : 'value'}}">{{item.priceDisplay}}</text>
+  </view>
+</view>
+<view wx:else class="spec-empty">暂无规格</view>

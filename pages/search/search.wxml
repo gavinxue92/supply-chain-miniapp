@@ -1,0 +1,55 @@
+<view class="search-page">
+  <page-header title="小陈食品-搜索商品" show-back="{{true}}" bind:caps="onCaps" />
+
+  <view class="search-head">
+    <search-bar
+      placeholder="请输入关键字搜索"
+      value="{{keyword}}"
+      bind:input="onKeywordInput"
+      bind:search="onSearchSubmit"
+    />
+  </view>
+
+  <view class="floating-music" bindtap="onUnavailable">
+    <image src="/assets/icons/line/music-note.png" mode="aspectFit" />
+  </view>
+
+  <block wx:if="{{state === 'idle'}}">
+    <view wx:if="{{history.length > 0}}" class="history-section">
+      <view class="history-head">
+        <text class="history-title">搜索历史</text>
+        <image class="trash-icon" src="/assets/icons/line/trash.png" mode="aspectFit" bindtap="onClearHistory" />
+      </view>
+      <view class="history-list">
+        <view
+          wx:for="{{history}}"
+          wx:key="*this"
+          class="history-chip"
+          data-value="{{item}}"
+          bindtap="onHistorySelect"
+        >{{item}}</view>
+      </view>
+    </view>
+    <view wx:else class="inline-state">输入食材名称开始搜索</view>
+  </block>
+
+  <view wx:elif="{{state === 'loading'}}" class="inline-state">正在搜索…</view>
+  <state-view wx:elif="{{state === 'error'}}" state="error" message="{{errorMessage}}" bind:retry="onRetry" />
+  <state-view
+    wx:elif="{{state === 'empty'}}"
+    state="empty"
+    message="{{submittedKeyword ? '没有找到相关产品，换个词试试' : '请输入搜索词'}}"
+  />
+  <block wx:else>
+    <view wx:if="{{submittedKeyword}}" class="result-head">“{{submittedKeyword}}” 的搜索结果</view>
+    <view class="product-grid">
+      <product-card wx:for="{{products}}" wx:key="id" product="{{item}}" bind:select="onProductSelect" />
+    </view>
+    <view class="result-tip">共 {{products.length}} 条结果</view>
+  </block>
+
+  <button wx:if="{{state === 'empty' || state === 'error'}}" class="home-button" hover-class="none" bindtap="onBackHome">
+    返回分类首页
+  </button>
+  <view class="bottom-space" />
+</view>

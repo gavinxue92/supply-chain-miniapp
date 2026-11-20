@@ -1,0 +1,40 @@
+.spec-list {
+  margin-top: 12rpx;
+}
+
+.spec-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12rpx;
+  padding: 6rpx 0;
+}
+
+.spec-name {
+  font-size: 22rpx;
+  color: #6b7280;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.spec-price {
+  flex-shrink: 0;
+}
+
+.spec-empty {
+  margin-top: 12rpx;
+  font-size: 22rpx;
+  color: #8a8f99;
+}
+
+.value {
+  color: #ff4d4f;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.face {
+  color: #ff7a1a;
+  font-size: 24rpx;
+}

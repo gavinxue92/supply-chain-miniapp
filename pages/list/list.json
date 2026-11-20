@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "分类产品列表",
+  "usingComponents": {
+    "product-card": "/components/product-card/product-card",
+    "state-view": "/components/state-view/state-view"
+  }
+}

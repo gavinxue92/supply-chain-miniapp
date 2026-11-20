@@ -1,0 +1,54 @@
+# ============================================================
+# 原生小程序 + TypeScript：tsc 在 .ts 旁生成 .js，
+# 微信开发者工具按 project.config.json 的 packOptions 只打包 .js。
+# 因此运行所需的 .js（app.js 及 pages/components/api/utils 等）必须入库，
+# 保证服务器 git clone 后无需 npm run build 即可直接部署展示。
+# 仅忽略 tests/ 下由 tsc 生成的 .js（vitest 直接运行 .ts）。
+# ============================================================
+
+# 依赖与包管理缓存
+node_modules/
+miniprogram_npm/
+.npm/
+.yarn/
+.pnp.*
+*.tsbuildinfo
+
+# 本地隐私与密钥
+.env
+.env.*
+!.env.example
+*.local
+
+# 微信开发者工具本地配置（每台机器不同）
+project.private.config.json
+
+# 测试产物与覆盖率
+coverage/
+.nyc_output/
+tests/**/*.js
+
+# 日志与运行时数据
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pids/
+*.pid
+*.seed
+
+# 本地工作草稿
+.scratch/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+.DS_Store?
+Thumbs.db
+desktop.ini

@@ -1,0 +1,6 @@
+<view class="state">
+  <view class="big">{{state === 'empty' ? '○' : '!'}}</view>
+  <view class="message">{{message}}</view>
+  <button wx:if="{{state === 'error'}}" class="action" hover-class="none" bindtap="onRetry">重试</button>
+  <button wx:if="{{state === 'notFound'}}" class="action" hover-class="none" bindtap="onBack">返回上一级</button>
+</view>

@@ -1,0 +1,28 @@
+.icon-item {
+  text-align: center;
+}
+
+.icon-item-hover {
+  opacity: 0.7;
+}
+
+.icon-badge {
+  width: 92rpx;
+  height: 92rpx;
+  margin: 0 auto 12rpx;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 34rpx;
+  font-weight: 500;
+}
+
+.icon-label {
+  font-size: 24rpx;
+  color: #3f4550;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
