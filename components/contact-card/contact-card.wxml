@@ -5,7 +5,7 @@
 
     <view wx:if="{{item.wechatId}}" class="contact-line">
       <text class="contact-value">微信号：{{item.wechatId}}</text>
-      <button class="mini-btn" hover-class="none" data-value="{{item.wechatId}}" bindtap="onCopyWechat">复制</button>
+      <view class="mini-btn" hover-class="mini-btn-hover" data-value="{{item.wechatId}}" bindtap="onCopyWechat">复制</view>
     </view>
 
     <view wx:if="{{item.qrImageUrl}}" class="qr-row">
@@ -23,8 +23,8 @@
     <view wx:if="{{item.phone}}" class="contact-line">
       <text class="contact-value">{{item.phone}}</text>
       <view class="contact-actions">
-        <button class="mini-btn" hover-class="none" data-value="{{item.phone}}" bindtap="onCopyPhone">复制</button>
-        <button class="mini-btn" hover-class="none" data-value="{{item.phone}}" bindtap="onDial">拨打</button>
+        <view class="mini-btn" hover-class="mini-btn-hover" data-value="{{item.phone}}" bindtap="onCopyPhone">复制</view>
+        <view class="mini-btn" hover-class="mini-btn-hover" data-value="{{item.phone}}" bindtap="onDial">拨打</view>
       </view>
     </view>
   </view>
