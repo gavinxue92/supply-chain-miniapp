@@ -89,9 +89,6 @@ Page({
         (0, app_state_1.setSearchKeyword)('');
         wx.navigateTo({ url: '/pages/search/search' });
     },
-    onCaps() {
-        wx.showToast({ title: '暂未开放', icon: 'none' });
-    },
     onRetry() {
         void this.loadTree();
     },

@@ -123,10 +123,6 @@ Page({
     wx.navigateTo({ url: '/pages/search/search' });
   },
 
-  onCaps(): void {
-    wx.showToast({ title: '暂未开放', icon: 'none' });
-  },
-
   onRetry(): void {
     void this.loadTree();
   },

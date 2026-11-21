@@ -1,5 +1,5 @@
 <view class="search-page">
-  <page-header title="小陈食品-搜索商品" show-back="{{true}}" bind:caps="onCaps" />
+  <page-header title="小陈食品-搜索商品" show-back="{{true}}" />
 
   <view class="search-head">
     <search-bar

@@ -153,10 +153,6 @@ Page({
     });
   },
 
-  onCaps(): void {
-    wx.showToast({ title: '暂未开放', icon: 'none' });
-  },
-
   onUnavailable(): void {
     wx.showToast({ title: '暂未开放', icon: 'none' });
   },

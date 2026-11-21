@@ -4,7 +4,6 @@
     show-home="{{true}}"
     show-search="{{true}}"
     bind:search="onSearchTap"
-    bind:caps="onCaps"
   />
 
   <view class="category-body">

@@ -27,8 +27,4 @@ Page({
   onUnavailable(): void {
     wx.showToast({ title: '暂未开放', icon: 'none' });
   },
-
-  onCaps(): void {
-    wx.showToast({ title: '暂未开放', icon: 'none' });
-  },
 });

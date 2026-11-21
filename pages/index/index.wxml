@@ -1,5 +1,5 @@
 <view class="home">
-  <page-header title="鲜链" show-caps="{{true}}" bind:caps="onUnavailable" />
+  <view class="status-spacer" style="height:{{statusBarHeight}}px" />
 
   <view class="hero-section">
     <view class="hero-copy">

@@ -72,7 +72,7 @@
   margin: 20rpx auto 0;
   padding: 12rpx 40rpx;
   border-radius: 32rpx;
-  background: #f5c400;
-  color: #3a3500;
+  background: #3f6b4a;
+  color: #ffffff;
   font-size: 26rpx;
 }

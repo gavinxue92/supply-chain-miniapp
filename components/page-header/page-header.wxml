@@ -14,11 +14,5 @@
     </view>
 
     <view class="title">{{title}}</view>
-
-    <view wx:if="{{showCaps}}" class="capsule right-capsule" bindtap="onCaps">
-      <text class="dots">•••</text>
-      <view class="divider"></view>
-      <view class="target"><view class="target-dot"></view></view>
-    </view>
   </view>
 </view>

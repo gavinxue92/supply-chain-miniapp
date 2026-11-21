@@ -21,7 +21,4 @@ Page({
     onUnavailable() {
         wx.showToast({ title: '暂未开放', icon: 'none' });
     },
-    onCaps() {
-        wx.showToast({ title: '暂未开放', icon: 'none' });
-    },
 });

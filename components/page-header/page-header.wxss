@@ -14,9 +14,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 132rpx;
-  height: 56rpx;
-  padding: 0 18rpx;
+  min-width: 174rpx;
+  height: 64rpx;
+  padding: 0 16rpx;
   border: 1rpx solid #e6e8ea;
   border-radius: 32rpx;
   background: #ffffff;
@@ -31,13 +31,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40rpx;
-  height: 44rpx;
+  width: 52rpx;
+  height: 52rpx;
 }
 
 .cap-icon {
-  width: 36rpx;
-  height: 36rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
 
 .divider {
@@ -55,26 +55,4 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.dots {
-  font-size: 24rpx;
-  letter-spacing: 2rpx;
-}
-
-.target {
-  width: 26rpx;
-  height: 26rpx;
-  border: 2rpx solid currentColor;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.target-dot {
-  width: 10rpx;
-  height: 10rpx;
-  background: currentColor;
-  border-radius: 50%;
 }

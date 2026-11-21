@@ -17,10 +17,6 @@ Component({
             type: Boolean,
             value: false,
         },
-        showCaps: {
-            type: Boolean,
-            value: true,
-        },
     },
     data: {
         statusBarHeight: 0,
@@ -48,9 +44,6 @@ Component({
         },
         onSearch() {
             this.triggerEvent('search');
-        },
-        onCaps() {
-            this.triggerEvent('caps');
         },
     },
 });

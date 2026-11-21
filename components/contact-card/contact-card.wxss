@@ -30,27 +30,40 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16rpx;
+  gap: 12rpx;
   padding: 6rpx 0;
 }
 
 .contact-value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 24rpx;
   color: #3f4550;
 }
 
 .contact-actions {
   display: flex;
-  gap: 12rpx;
+  flex-shrink: 0;
+  gap: 8rpx;
 }
 
 .mini-btn {
-  padding: 8rpx 20rpx;
-  border-radius: 24rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: auto;
+  height: 44rpx;
+  margin: 0;
+  padding: 0 12rpx;
+  border-radius: 8rpx;
   background: #fff3d6;
   color: #9a6b00;
-  font-size: 22rpx;
-  line-height: 1.5;
+  font-size: 20rpx;
+  line-height: 1;
 }
 
 .qr-row {
