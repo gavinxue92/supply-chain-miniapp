@@ -1,0 +1,12 @@
+<view class="product-row" hover-class="row-hover" bindtap="onTap">
+  <image-view class="row-image" src="{{product.imageUrl}}" hint="图片加载失败" />
+  <view class="row-body">
+    <view class="row-name">{{product.name}}</view>
+    <view wx:if="{{product.specSummary}}" class="row-spec">{{product.specSummary}}</view>
+    <view wx:if="{{product.priceDisplay}}" class="row-price">
+      <text wx:if="{{product.showCurrency}}" class="currency">¥</text>
+      <text class="amount">{{product.priceDisplay}}</text>
+    </view>
+  </view>
+  <view class="row-arrow"></view>
+</view>

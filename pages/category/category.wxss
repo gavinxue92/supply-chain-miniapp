@@ -1,89 +1,107 @@
 .category-page {
-  min-height: 100vh;
-  background: #f8f3e8;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #ffffff;
+}
+
+.inline-state {
+  padding: 120rpx 40rpx;
+  text-align: center;
+  color: #9c8b74;
+  font-size: 26rpx;
 }
 
 .category-body {
   display: flex;
-  align-items: flex-start;
-  height: calc(100vh - 176rpx);
+  flex: 1;
+  min-height: 0;
 }
 
 .first-column {
-  width: 180rpx;
+  width: 160rpx;
   flex-shrink: 0;
   height: 100%;
-  background: #f3ead9;
-  border-right: 1rpx solid #e6dbc6;
+  background: #f7f7f5;
+  border-right: 1rpx solid #e6e8ea;
 }
 
 .first-item {
   position: relative;
-  padding: 30rpx 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96rpx;
+  color: #5f5e5a;
+  font-size: 26rpx;
   text-align: center;
-  color: #7a6a55;
-  font-size: 25rpx;
 }
 
 .first-item.active {
   background: #ffffff;
-  color: #3c3327;
-  font-weight: 600;
+  color: #2c2c2a;
+  font-weight: 500;
 }
 
 .first-active-bar {
   position: absolute;
   left: 0;
-  top: 22rpx;
-  bottom: 22rpx;
+  top: 26rpx;
   width: 6rpx;
+  height: 44rpx;
   border-radius: 0 6rpx 6rpx 0;
-  background: #6e9b8a;
+  background: #3b6d11;
 }
 
 .second-column {
   flex: 1;
   min-width: 0;
   height: 100%;
-  padding: 20rpx 18rpx 0;
-}
-
-.second-row {
-  display: flex;
-  white-space: nowrap;
-  padding-bottom: 16rpx;
-}
-
-.second-chip {
-  display: inline-block;
-  flex-shrink: 0;
-  padding: 12rpx 24rpx;
-  margin-right: 14rpx;
-  border-radius: 30rpx;
   background: #ffffff;
-  color: #7a6a55;
+}
+
+.product-group {
+  background: #ffffff;
+}
+
+.group-title {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 18rpx 20rpx 12rpx;
+  background: #ffffff;
+  color: #2c2c2a;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.group-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48rpx 20rpx;
+  color: #999999;
   font-size: 24rpx;
 }
 
-.second-chip.active {
-  background: #7f9b84;
-  color: #ffffff;
-}
-
-.inline-state {
-  padding: 80rpx 20rpx;
+.group-error {
+  max-width: 100%;
   text-align: center;
-  color: #9c8b74;
-  font-size: 26rpx;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16rpx;
-  padding-top: 12rpx;
+.group-retry {
+  margin-top: 16rpx;
+  padding: 8rpx 28rpx;
+  border-radius: 24rpx;
+  background: #f5f5f5;
+  color: #3b6d11;
+  font-size: 24rpx;
 }
 
-.bottom-space {
+.retry-hover {
+  opacity: 0.7;
+}
+
+.list-bottom-space {
   height: 140rpx;
 }

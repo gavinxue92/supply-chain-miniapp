@@ -6,7 +6,11 @@
     bind:search="onSearchTap"
   />
 
-  <view class="category-body">
+  <view wx:if="{{state === 'loading'}}" class="inline-state">正在加载分类…</view>
+  <state-view wx:elif="{{state === 'error'}}" state="error" message="{{errorMessage}}" bind:retry="onRetry" />
+  <state-view wx:elif="{{state === 'empty'}}" state="empty" message="暂无分类数据" />
+
+  <view wx:else class="category-body">
     <scroll-view class="first-column" scroll-y>
       <view
         wx:for="{{firstLevel}}"
@@ -20,30 +24,34 @@
       </view>
     </scroll-view>
 
-    <view class="second-column">
-      <scroll-view class="second-row" scroll-x>
-        <view
-          class="second-chip {{activeSecondId === allFilterId ? 'active' : ''}}"
-          data-id="{{allFilterId}}"
-          bindtap="onSecondSelect"
-        >全部</view>
-        <view
-          wx:for="{{secondOptions}}"
-          wx:key="id"
-          class="second-chip {{activeSecondId === item.id ? 'active' : ''}}"
-          data-id="{{item.id}}"
-          bindtap="onSecondSelect"
-        >{{item.name}}</view>
-      </scroll-view>
+    <scroll-view
+      id="group-list"
+      class="second-column"
+      scroll-y
+      scroll-into-view="{{activeGroupAnchor}}"
+      bindscroll="onListScroll"
+    >
+      <view wx:for="{{groups}}" wx:for-item="group" wx:key="id" id="{{group.id}}" class="product-group">
+        <view class="group-title">{{group.name}}</view>
 
-      <view wx:if="{{state === 'loading'}}" class="inline-state">正在加载分类产品…</view>
-      <state-view wx:elif="{{state === 'error'}}" state="error" message="{{errorMessage}}" bind:retry="onRetry" />
-      <state-view wx:elif="{{state === 'empty'}}" state="empty" message="该分类暂无产品" />
-      <view wx:else class="product-grid">
-        <product-card wx:for="{{visibleProducts}}" wx:key="id" product="{{item}}" bind:select="onProductSelect" />
+        <view wx:if="{{group.state === 'idle' || group.state === 'loading'}}" class="group-state">加载中</view>
+        <view wx:elif="{{group.state === 'error'}}" class="group-state">
+          <text class="group-error">{{group.message}}</text>
+          <view class="group-retry" hover-class="retry-hover" data-id="{{group.categoryId}}" bindtap="onRetryGroup">重试</view>
+        </view>
+        <view wx:elif="{{group.state === 'empty'}}" class="group-state">暂无产品</view>
+        <block wx:else>
+          <product-row
+            wx:for="{{group.products}}"
+            wx:for-item="product"
+            wx:key="id"
+            product="{{product}}"
+            bind:select="onProductSelect"
+          />
+        </block>
       </view>
-    </view>
-  </view>
 
-  <view class="bottom-space" />
+      <view class="list-bottom-space" />
+    </scroll-view>
+  </view>
 </view>

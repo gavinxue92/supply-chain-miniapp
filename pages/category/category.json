@@ -2,7 +2,7 @@
   "navigationStyle": "custom",
   "usingComponents": {
     "page-header": "/components/page-header/page-header",
-    "product-card": "/components/product-card/product-card",
+    "product-row": "/components/product-row/product-row",
     "state-view": "/components/state-view/state-view"
   }
 }
